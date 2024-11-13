@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Share demo">
+    <meta name="description" content="Demo of our file share website">
+
+    <title>Share demo</title>
+
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #1a1a1d;
+            color: #e1e1e1;
+            padding: 5%;
+            text-align: center;
+        }
+
+        a {
+            color: #58a6ff;
+            text-decoration: none;
+        }
+
+        .btn {
+            border-radius: 10px;
+            border: 1px solid #58a6ff;
+            color: #58a6ff;
+            background: #2b2b2f;
+            font-size: 150%;
+            padding: 15px 30px;
+            margin: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #58a6ff;
+            color: #1a1a1d;
+        }
+    </style>
+</head>
+
+<body>
+        <h1><a href="https://share.maoyue.tw">Share demo</a></h1>
+    <p>Demo of our file share website</p>
+    
+    <form action="/new">
+        <input type="submit" class="btn" value="上傳檔案">
+    </form>
+    <form action="/dev">
+        <input type="submit" class="btn" value="       API      ">
+    </form>
+</body>
+
+</html>
