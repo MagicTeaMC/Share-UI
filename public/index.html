@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Sharing</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="upload-box">
+            <h1>File Sharing</h1>
+            <div class="upload-area" id="dropZone">
+                <img src="upload-icon.svg" alt="Upload" class="upload-icon">
+                <p>Drag and drop files here or</p>
+                <label for="fileInput" class="upload-button">Choose File</label>
+                <input type="file" id="fileInput" hidden>
+            </div>
+            <div class="progress-bar" id="progressBar">
+                <div class="progress"></div>
+            </div>
+            <div class="share-link" id="shareLink">
+                <input type="text" id="linkInput" readonly>
+                <button id="copyButton">Copy Link</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
