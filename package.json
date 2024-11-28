@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "dependencies": {
     "express": "^4.21.1",
+    "express-rate-limit": "^7.4.1",
     "multer": "^1.4.4"
   },
   "main": "server.js",
