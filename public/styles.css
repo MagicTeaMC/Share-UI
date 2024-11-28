@@ -1,8 +1,11 @@
 :root {
-    --primary-color: #4f46e5;
-    --secondary-color: #818cf8;
-    --bg-color: #f3f4f6;
-    --text-color: #1f2937;
+    --primary-color: #7c3aed;
+    --secondary-color: #c084fc;
+    --bg-color: #1e1e2f;
+    --text-color: #e5e5e5;
+    --card-bg-color: #2d2d40;
+    --hover-bg-color: #383856;
+    --border-color: #52527d;
 }
 
 * {
@@ -29,10 +32,10 @@ body {
 }
 
 .upload-box {
-    background: white;
+    background: var(--card-bg-color);
     border-radius: 1rem;
     padding: 2rem;
-    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.3);
 }
 
 h1 {
@@ -42,7 +45,7 @@ h1 {
 }
 
 .upload-area {
-    border: 2px dashed var(--secondary-color);
+    border: 2px dashed var(--border-color);
     border-radius: 0.5rem;
     padding: 2rem;
     text-align: center;
@@ -51,13 +54,14 @@ h1 {
 }
 
 .upload-area:hover {
-    background-color: var(--bg-color);
+    background-color: var(--hover-bg-color);
 }
 
 .upload-icon {
     width: 64px;
     height: 64px;
     margin-bottom: 1rem;
+    filter: invert(75%);
 }
 
 .upload-button {
@@ -78,7 +82,7 @@ h1 {
 .progress-bar {
     margin-top: 1rem;
     height: 0.5rem;
-    background-color: var(--bg-color);
+    background-color: var(--card-bg-color);
     border-radius: 0.25rem;
     overflow: hidden;
     display: none;
@@ -99,9 +103,11 @@ h1 {
 .share-link input {
     width: 100%;
     padding: 0.5rem;
-    border: 1px solid var(--secondary-color);
+    border: 1px solid var(--border-color);
     border-radius: 0.25rem;
     margin-bottom: 0.5rem;
+    background-color: var(--card-bg-color);
+    color: var(--text-color);
 }
 
 .share-link button {
