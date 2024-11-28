@@ -4,7 +4,8 @@
   "dependencies": {
     "express": "^4.21.1",
     "express-rate-limit": "^7.4.1",
-    "multer": "^1.4.4"
+    "multer": "^1.4.4",
+    "serve-favicon": "^2.5.0"
   },
   "main": "server.js",
   "scripts": {

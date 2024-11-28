@@ -124,3 +124,12 @@ h1 {
 .share-link button:hover {
     background-color: var(--secondary-color);
 }
+
+.circular-icon {
+    width: 150px; /* You can adjust the size */
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover; /* This ensures the image covers the circle without distortion */
+    border: 5px solid #fff; /* Optional: Adds a white border around the image */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Adds a shadow effect */
+}

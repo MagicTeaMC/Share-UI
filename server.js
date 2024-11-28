@@ -4,6 +4,7 @@ const path = require('path');
 const crypto = require('crypto');
 const fs = require('fs');
 const rateLimit = require('express-rate-limit');
+const favicon = require('serve-favicon');
 
 const app = express();
 
@@ -16,6 +17,8 @@ const uploadLimiter = rateLimit({
 
 // Serve static files
 app.use(express.static('public'));
+
+app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 
 app.set('trust proxy', 1 /* number of proxies between user and server */)
 
