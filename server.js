@@ -10,12 +10,14 @@ const app = express();
 // Rate limiting middleware to prevent excessive scanning
 const uploadLimiter = rateLimit({
   windowMs: 15 * 60 * 1000, // 15 minutes
-  max: 100, // Limit 100 uploads per IP
+  max: 10, // Limit 10 uploads per IP
   message: 'Upload limit exceeded, please try again later'
 });
 
 // Serve static files
 app.use(express.static('public'));
+
+app.set('trust proxy', 1 /* number of proxies between user and server */)
 
 // Configure multer storage
 const storage = multer.diskStorage({
@@ -40,7 +42,7 @@ const storage = multer.diskStorage({
 const upload = multer({
   storage: storage,
   limits: {
-    fileSize: 100 * 1024 * 1024, // Limit file size to 100MB
+    fileSize: 1000 * 1024 * 1024, // Limit file size to 1000MB
     files: 1 // Limit the number of files per upload
   },
 });
